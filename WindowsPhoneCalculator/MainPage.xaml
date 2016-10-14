@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="WindowsPhoneCalculator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WindowsPhoneCalculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Height="151" Margin="10,74,0,0" VerticalAlignment="Top" Width="380">
+            <TextBlock x:Name="tbPreview" TextWrapping="Wrap" Text="" Height="33" HorizontalAlignment="Right" FontSize="20" Foreground="#FFC7C5C5" FontWeight="Bold"/>
+            <TextBox x:Name="txtInput" Margin="0" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Height="123" TextAlignment="Right"  FontFamily="Global User Interface" FontSize="72"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="400" Margin="10,230,0,0" VerticalAlignment="Top" Width="380">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="72" VerticalAlignment="Top" Width="380">
+                <Button x:Name="btnBackspace" MinWidth="90"  Content="DEL" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,-9.5" FontSize="24" BorderThickness="0.1" Background="#FF3E3C3C" Click="btnBackspace_Click"/>
+                <Button x:Name="btnClear" MinWidth="90"  Content="C" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9.5,0,-9.5" FontSize="24" BorderThickness="0.1" Background="#FF3E3C3C" Click="btnClear_Click"/>
+                <Button x:Name="btnPlusOrMinus" MinWidth="90"  Content="+-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9.5,0,-9.5" FontSize="24" BorderThickness="0.1" Background="#FF3E3C3C" Click="btnPlusOrMinus_Click"/>
+                <Button x:Name="btnDivide" MinWidth="90"  Content="/" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9.5,0,-9.833" FontSize="24" BorderThickness="0.1" Background="#FF3E3C3C" Click="btnDivide_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="72" VerticalAlignment="Top" Width="380" Margin="0,10,0,0">
+                <Button x:Name="btnSeven" MinWidth="90"  Content="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,-9.5" FontSize="24" BorderThickness="0.1" Background="#FF252222" Click="btnSeven_Click"/>
+                <Button x:Name="btnEight" MinWidth="90"  Content="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9,0,-10.333" FontSize="24" BorderThickness="0.1" Background="#FF252222" Click="btnEight_Click"/>
+                <Button x:Name="btnNine" MinWidth="90"  Content="9" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9.5,0,-9.5" FontSize="24" BorderThickness="0.1" Background="#FF252222" Click="btnNine_Click"/>
+                <Button x:Name="btnMultiply" MinWidth="90"  Content="x" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9.5,0,-9.833" FontSize="24" BorderThickness="0.1" Background="#FF3E3C3C" Click="btnMultiply_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="72" VerticalAlignment="Top" Width="380" Margin="0,10,0,0">
+                <Button x:Name="btnFour" MinWidth="90"  Content="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,-9.5" FontSize="24" BorderThickness="0.1" Background="#FF252222" Click="btnFour_Click"/>
+                <Button x:Name="btnFive" MinWidth="90"  Content="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9.5,0,-9.5" FontSize="24" BorderThickness="0.1" Background="#FF252222" Click="btnFive_Click"/>
+                <Button x:Name="btnSix" MinWidth="90"  Content="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9.5,0,-9.5" FontSize="24" BorderThickness="0.1" Background="#FF252222" Click="btnSix_Click"/>
+                <Button x:Name="btnMinus" MinWidth="90"  Content="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9.5,0,-9.833" FontSize="24" BorderThickness="0.1" Background="#FF3E3C3C" Click="btnMinus_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="72" VerticalAlignment="Top" Width="380" Margin="0,10,0,0">
+                <Button x:Name="btnOne" MinWidth="90"  Content="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,-9.5" FontSize="24" BorderThickness="0.1" Background="#FF252222" Click="btnOne_Click"/>
+                <Button x:Name="btnTwo" MinWidth="90"  Content="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9.5,0,-9.5" FontSize="24" BorderThickness="0.1" Background="#FF252222" Click="btnTwo_Click"/>
+                <Button x:Name="btnThree" MinWidth="90"  Content="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9.5,0,-9.5" FontSize="24" BorderThickness="0.1" Background="#FF252222" Click="btnThree_Click"/>
+                <Button x:Name="btnAdd" MinWidth="90"  Content="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9.5,0,-9.833" FontSize="24" BorderThickness="0.1" Background="#FF3E3C3C" Click="btnAdd_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="72" VerticalAlignment="Top" Width="380" Margin="0,10,0,0">
+                <Button x:Name="btnZero" MinWidth="90"  Content="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,-9,0,-10.333" FontSize="24" BorderThickness="0.1" Background="#FF252222" Width="187" Click="btnZero_Click"/>
+                <Button x:Name="btnDot" MinWidth="90"  Content="." HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9.5,0,-9.5" FontSize="24" BorderThickness="0.1" Background="#FF252222" Click="btnDot_Click"/>
+                <Button x:Name="btnEqual" MinWidth="90"  Content="=" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="6.33,-9.5,0,-9.833" FontSize="24" BorderThickness="0.1" Background="#FF095FC7" Click="btnEqual_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="69" Margin="10,0,0,0" VerticalAlignment="Top" Width="380">
+            <TextBlock x:Name="tbName" TextWrapping="Wrap" Text="Almodad Mutinda" FontSize="16" Foreground="#FF958E8E"/>
+            <TextBlock x:Name="tbTitle" TextWrapping="Wrap" Text="SolveIT" Height="46" FontSize="40"/>
+        </StackPanel>
+
+    </Grid>
+</Page>
